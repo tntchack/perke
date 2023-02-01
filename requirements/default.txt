@@ -1,6 +1,6 @@
-hazm
-networkx
-scipy
-typer
-PyGithub
-requests
+hazm==0.7.0
+networkx==3.0
+scipy==1.10.0
+typer==0.7.0
+PyGithub==1.57
+requests==2.28.2
