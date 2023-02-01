@@ -174,7 +174,7 @@ class TextRank(Extractor):
 
         # Compute the word weights using the unweighted PageRank
         # formulae
-        weights = nx.pagerank_scipy(self.graph,
+        weights = nx.pagerank(self.graph,
                                     alpha=0.85,
                                     tol=0.0001,
                                     weight=None)
