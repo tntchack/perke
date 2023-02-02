@@ -109,9 +109,9 @@ class SingleRank(TextRank):
         self.build_word_graph(window_size)
 
         # Compute the word weights using random walk
-        weights = nx.pagerank_scipy(self.graph,
-                                    alpha=0.85,
-                                    tol=0.0001,
-                                    weight='weight')
+        weights = nx.pagerank(self.graph,
+                              alpha=0.85,
+                              tol=0.0001,
+                              weight='weight')
 
         self.weight_candidates_with_words_weights(weights, normalize_weights)

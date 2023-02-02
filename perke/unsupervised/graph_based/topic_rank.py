@@ -250,7 +250,7 @@ class TopicRank(Extractor):
         self.build_topic_graph()
 
         # Compute the word weights using random walk
-        weights = nx.pagerank_scipy(self.graph, alpha=0.85, weight='weight')
+        weights = nx.pagerank(self.graph, alpha=0.85, weight='weight')
 
         # Loop through the topics
         for i, topic in enumerate(self.topics):

@@ -253,6 +253,6 @@ class MultipartiteRank(TopicRank):
             self.weight_adjustment(alpha)
 
         # Compute the word weights using random walk
-        weights = nx.pagerank_scipy(self.graph)
+        weights = nx.pagerank(self.graph)
         for c in weights:
             self.candidates[c].weight = weights[c]
